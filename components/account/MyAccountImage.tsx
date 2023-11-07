@@ -31,14 +31,14 @@ export default MyAccountImage;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.primaryTintColor,
-    height: Dimensions.get("window").height / 3,
+    height: Dimensions.get("window").height / 2.5,
     alignItems: "center",
-    paddingTop: Dimensions.get("window").height / 20,
+    paddingTop: Dimensions.get("window").height / 10,
   },
   image: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 150,
+    height: 150,
+    borderRadius: 75,
     marginBottom: 16,
   },
 });

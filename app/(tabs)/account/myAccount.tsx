@@ -10,18 +10,20 @@ type Props = {};
 
 const myAccount = (props: Props) => {
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.wrapper}>
-        <MyAccountImage />
+    <View style={styles.wrapper}>
+      <MyAccountImage />
+      <View style={{ alignItems: "center" }}>
         <TotalPaid />
+      </View>
+      <ScrollView style={styles.container}>
         <View
           style={styles.separator}
           lightColor="#eee"
           darkColor="rgba(255,255,255,0.1)"
         />
         <EditScreenInfo path="app/(tabs)/two.tsx" />
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
