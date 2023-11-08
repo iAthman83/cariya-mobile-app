@@ -3,8 +3,11 @@ import EditScreenInfo from "../../../components/EditScreenInfo";
 
 import { Text, View } from "../../../components/Themed";
 
+// components
 import MyAccountImage from "../../../components/account/MyAccountImage";
 import TotalPaid from "../../../components/account/TotalPaid";
+import BoldHeader from "../../../components/utils/BoldHeader";
+import RecentPaymentCard from "../../../components/account/RecentPaymentCard";
 
 type Props = {};
 
@@ -12,16 +15,26 @@ const myAccount = (props: Props) => {
   return (
     <View style={styles.wrapper}>
       <MyAccountImage />
-      <View style={{ alignItems: "center" }}>
+      <View style={{ alignItems: "center", marginBottom: 30 }}>
         <TotalPaid />
       </View>
+      <BoldHeader input="recent transactions" />
       <ScrollView style={styles.container}>
-        <View
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        <RecentPaymentCard />
+        {/* <View
           style={styles.separator}
           lightColor="#eee"
           darkColor="rgba(255,255,255,0.1)"
-        />
-        <EditScreenInfo path="app/(tabs)/two.tsx" />
+        /> */}
+        {/* <EditScreenInfo path="app/(tabs)/two.tsx" /> */}
       </ScrollView>
     </View>
   );

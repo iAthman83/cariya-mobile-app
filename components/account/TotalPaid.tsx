@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   amountText: {
-    fontWeight: "bold",
+    fontWeight: "900",
     fontSize: 26,
   },
   totalValueText: {
