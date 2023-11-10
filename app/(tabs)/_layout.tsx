@@ -24,14 +24,6 @@ export default function TabLayout() {
       }}
     >
       <Tabs.Screen
-        name="account"
-        options={{
-          title: "Account",
-          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
-          headerShown: false,
-        }}
-      />
-      <Tabs.Screen
         name="index"
         options={{
           title: "Home",
@@ -50,6 +42,24 @@ export default function TabLayout() {
               </Pressable>
             </Link>
           ),
+        }}
+      />
+      <Tabs.Screen
+        name="account"
+        options={{
+          title: "Account",
+          tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+          headerShown: false,
+        }}
+      />
+      <Tabs.Screen
+        name="auth"
+        options={{
+          title: "User Auth",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="sign-in" color={color} />
+          ),
+          headerShown: false,
         }}
       />
     </Tabs>
