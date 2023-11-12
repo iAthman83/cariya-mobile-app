@@ -20,7 +20,7 @@ const login = (props: Props) => {
       {/* different */}
       <View>
         <MainHeader input="welcome back!" />
-        <Text>Please sign in to your account</Text>
+        <Text>Sign in button</Text>
       </View>
     </View>
     // </SafeAreaView>
