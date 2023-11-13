@@ -1,11 +1,11 @@
 import {
   StyleSheet,
   SafeAreaView,
-  TextInput,
+  // TextInput,
   Dimensions,
   Pressable,
 } from "react-native";
-import { View, Text } from "../../../components/Themed";
+import { View, Text, TextInput } from "../../../components/Themed";
 import MainHeader from "../../../components/utils/MainHeader";
 import Colors from "../../../constants/Colors";
 import Icons from "../../../components/utils/Icons";
@@ -42,15 +42,31 @@ const login = (props: Props) => {
           ></View>
           <Text>or</Text>
         </View>
+        {/* Social icons */}
         <View style={styles.socialSignIn}>
-          <View style={styles.socialIconWrapper}>
-            <Icons name="google" color={Colors.primaryTintColor} />
+          <View
+            style={{
+              ...styles.socialIconWrapper,
+              backgroundColor: Colors.linkedInColor,
+            }}
+          >
+            <Icons name="linkedin" color={Colors.tintColorDark} />
           </View>
-          <View style={styles.socialIconWrapper}>
-            <Icons name="linkedin" color={Colors.primaryTintColor} />
+          <View
+            style={{
+              ...styles.socialIconWrapper,
+              backgroundColor: Colors.googleColor,
+            }}
+          >
+            <Icons name="google" color={Colors.tintColorDark} />
           </View>
-          <View style={styles.socialIconWrapper}>
-            <Icons name="facebook" color={Colors.primaryTintColor} />
+          <View
+            style={{
+              ...styles.socialIconWrapper,
+              backgroundColor: Colors.facebookColor,
+            }}
+          >
+            <Icons name="facebook" color={Colors.tintColorDark} />
           </View>
         </View>
       </View>
@@ -105,9 +121,9 @@ const styles = StyleSheet.create({
     marginBottom: -10,
   },
   socialIconWrapper: {
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: Colors.inputBorderColor,
+    borderRadius: 5,
+    // borderWidth: 1,
+    // borderColor: Colors.inputBorderColor,
     paddingVertical: 10,
     width: Dimensions.get("window").width / 9,
     alignItems: "center",
@@ -138,5 +154,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     gap: 10,
+    justifyContent: "center",
   },
 });
