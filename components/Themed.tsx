@@ -7,6 +7,7 @@ import {
   Text as DefaultText,
   useColorScheme,
   View as DefaultView,
+  TextInput as DefaultTextInput,
 } from "react-native";
 
 import Colors from "../constants/Colors";
@@ -17,7 +18,7 @@ type ThemeProps = {
 };
 
 export type TextProps = ThemeProps & DefaultText["props"];
-export type TextInputProps = ThemeProps & DefaultText["props"];
+export type TextInputProps = ThemeProps & DefaultTextInput["props"];
 export type ViewProps = ThemeProps & DefaultView["props"];
 
 export function useThemeColor(
@@ -45,7 +46,7 @@ export function TextInput(props: TextInputProps) {
   const { style, lightColor, darkColor, ...otherProps } = props;
   const color = useThemeColor({ light: lightColor, dark: darkColor }, "text");
 
-  return <DefaultText style={[{ color }, style]} {...otherProps} />;
+  return <DefaultTextInput style={[{ color }, style]} {...otherProps} />;
 }
 
 export function View(props: ViewProps) {
