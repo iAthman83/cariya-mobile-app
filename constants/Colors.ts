@@ -3,6 +3,7 @@ const tintColorDark = '#fff';
 const primaryTintColor = '#FA2A55'
 const primaryTextColor = '#FFFFFF';
 const grayBackgroundColor = '#EDEDED'
+const inputBorderColor= "#BDBDBD"
 
 export default {
   light: {
@@ -23,5 +24,6 @@ export default {
   },
   primaryTintColor,
   primaryTextColor,
-  grayBackgroundColor
+  grayBackgroundColor, 
+  inputBorderColor
 };
