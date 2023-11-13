@@ -10,12 +10,12 @@ const RecentPaymentCard = (props: Props) => {
   return (
     <View
       lightColor={Colors.grayBackgroundColor}
-      darkColor="#38221A"
+      darkColor="#0F172A"
       style={styles.container}
     >
       <View
         lightColor={Colors.grayBackgroundColor}
-        darkColor="#38221A"
+        darkColor="#0F172A"
         style={styles.leftWrapper}
       >
         <Text style={styles.transactionType}>08/11/2023</Text>
@@ -23,7 +23,7 @@ const RecentPaymentCard = (props: Props) => {
       </View>
       <View
         lightColor={Colors.grayBackgroundColor}
-        darkColor="#38221A"
+        darkColor="#0F172A"
         style={styles.rightWrapper}
       >
         <Icons name="check-square" color="green" />
