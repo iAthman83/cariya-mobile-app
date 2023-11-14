@@ -1,32 +1,35 @@
 import { View, Text } from "../Themed";
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, StyleSheet, Platform } from "react-native";
 import React from "react";
 import Colors from "../../constants/Colors";
 import Icons from "../utils/Icons";
 
-type Props = {};
+type Props = {
+  childNames: string;
+};
 
 const RecentPaymentCard = (props: Props) => {
   return (
     <View
       lightColor={Colors.grayBackgroundColor}
-      darkColor="#0F172A"
+      darkColor="#8D837E"
       style={styles.container}
     >
       <View
         lightColor={Colors.grayBackgroundColor}
-        darkColor="#0F172A"
+        darkColor="#8D837E"
         style={styles.leftWrapper}
       >
-        <Text style={styles.transactionType}>08/11/2023</Text>
-        <Text style={styles.amountPaid}>5,000 UGX</Text>
+        <Text style={styles.names}>{props.childNames}</Text>
+        <Text style={styles.transactionDate}>08/11/2023 1:32 PM</Text>
       </View>
       <View
         lightColor={Colors.grayBackgroundColor}
-        darkColor="#0F172A"
+        darkColor="#8D837E"
         style={styles.rightWrapper}
       >
-        <Icons name="check-square" color="green" />
+        <Text style={styles.amountPaid}>5,000 UGX</Text>
+        {/* <Icons name="check-square" color="green" /> */}
       </View>
     </View>
   );
@@ -55,12 +58,16 @@ const styles = StyleSheet.create({
     height: "100%",
     justifyContent: "center",
   },
-  transactionType: {
+  names: {
     fontWeight: "500",
+    fontSize: Platform.OS === "ios" ? 20 : 16,
+  },
+  transactionDate: {
+    fontWeight: "300",
     fontSize: 12,
   },
   amountPaid: {
-    fontWeight: "600",
-    fontSize: 20,
+    fontWeight: "700",
+    fontSize: 18,
   },
 });

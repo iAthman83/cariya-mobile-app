@@ -20,15 +20,13 @@ const myAccount = (props: Props) => {
       </View>
       <BoldHeader input="recent transactions" />
       <ScrollView style={styles.container}>
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
-        <RecentPaymentCard />
+        <RecentPaymentCard childNames="John Doe" />
+        <RecentPaymentCard childNames="Isaac Newton" />
+        <RecentPaymentCard childNames="John Doe" />
+        <RecentPaymentCard childNames="John Doe" />
+        <RecentPaymentCard childNames="Isaac Newton" />
+        <RecentPaymentCard childNames="John Doe" />
+        <RecentPaymentCard childNames="John Doe" />
         {/* <View
           style={styles.separator}
           lightColor="#eee"
@@ -48,6 +46,7 @@ export default myAccount;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 10,
   },
   wrapper: {
     flex: 1,
