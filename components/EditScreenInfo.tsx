@@ -18,13 +18,13 @@ export default function EditScreenInfo({ path }: { path: string }) {
           Open up the code for this screen:
         </Text> */}
 
-        <View
+        {/* <View
           style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
           darkColor="rgba(255,255,255,0.05)"
           lightColor="rgba(0,0,0,0.05)"
         >
-          {/* <MonoText>{path}</MonoText> */}
-        </View>
+          <MonoText>{path}</MonoText>
+        </View> */}
 
         <Text
           style={styles.getStartedText}
