@@ -1,14 +1,19 @@
-import { Dimensions, StyleSheet } from "react-native";
+import { Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import { Text, View } from "../Themed";
 import React from "react";
 import Colors from "../../constants/Colors";
 import { FontAwesome } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const DepositFloatingButton = () => {
+  const router = useRouter();
   return (
-    <View style={styles.container}>
+    <TouchableOpacity
+      onPress={() => router.push("/(modals)/paymentForm")}
+      style={styles.container}
+    >
       <FontAwesome size={20} name="heart" color={Colors.primaryTextColor} />
-    </View>
+    </TouchableOpacity>
   );
 };
 
