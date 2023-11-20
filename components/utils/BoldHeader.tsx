@@ -25,5 +25,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "700",
     textTransform: "capitalize",
+    fontFamily: "Inter-Medium",
   },
 });
