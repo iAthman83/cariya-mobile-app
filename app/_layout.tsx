@@ -5,9 +5,10 @@ import {
   ThemeProvider,
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
-import { SplashScreen, Stack, useRouter } from "expo-router";
+import { SplashScreen, Stack, useRouter, Link } from "expo-router";
 import { useEffect } from "react";
-import { TouchableOpacity, useColorScheme } from "react-native";
+import { TouchableOpacity, useColorScheme, Pressable } from "react-native";
+import Colors from "../constants/Colors";
 import Icons from "../components/utils/Icons";
 
 function TabBarIcon(props: {
@@ -32,6 +33,9 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    "Inter-Regular": require("../assets/fonts/Inter-Regular.ttf"),
+    "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
+    "Inter-Medium": require("../assets/fonts/Inter-Medium.ttf"),
     SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
     ...FontAwesome.font,
   });
@@ -75,6 +79,20 @@ function RootLayoutNav() {
             // presentation: "modal",
             title: "Log in or sign up",
             // headerShown: false,
+            headerRight: () => (
+              <Link href="/(modals)/terms" asChild>
+                <Pressable>
+                  {({ pressed }) => (
+                    <FontAwesome
+                      name="info-circle"
+                      size={25}
+                      color={Colors[colorScheme ?? "light"].text}
+                      style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                    />
+                  )}
+                </Pressable>
+              </Link>
+            ),
           }}
         />
         <Stack.Screen

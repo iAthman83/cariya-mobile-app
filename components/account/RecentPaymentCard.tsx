@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
   names: {
     fontWeight: "500",
     fontSize: Platform.OS === "ios" ? 20 : 16,
+    fontFamily: "Inter-Medium",
   },
   transactionDate: {
     fontWeight: "300",
@@ -69,5 +70,6 @@ const styles = StyleSheet.create({
   amountPaid: {
     fontWeight: "700",
     fontSize: 18,
+    fontFamily: "Inter-Bold",
   },
 });
