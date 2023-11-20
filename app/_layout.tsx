@@ -99,6 +99,10 @@ function RootLayoutNav() {
           name="(modals)/terms"
           options={{ presentation: "modal", title: "Terms and conditions" }}
         />
+        <Stack.Screen
+          name="(modals)/paymentForm"
+          options={{ presentation: "modal", title: "Top up your subscription" }}
+        />
       </Stack>
     </ThemeProvider>
   );

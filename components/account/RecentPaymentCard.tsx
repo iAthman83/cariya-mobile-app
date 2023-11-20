@@ -28,7 +28,7 @@ const RecentPaymentCard = (props: Props) => {
         darkColor="#8D837E"
         style={styles.rightWrapper}
       >
-        <Text style={styles.amountPaid}>5,000 UGX</Text>
+        <Text style={styles.amountPaid}>shs 5,000</Text>
         {/* <Icons name="check-square" color="green" /> */}
       </View>
     </View>
