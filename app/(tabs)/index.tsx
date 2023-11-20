@@ -9,10 +9,12 @@ import TotalPaid from "../../components/account/TotalPaid";
 import BoldHeader from "../../components/utils/BoldHeader";
 import RecentPaymentCard from "../../components/account/RecentPaymentCard";
 import PaymentSummary from "../../components/home/PaymentSummary";
+import DepositFloatingButton from "../../components/utils/DepositFloatingButton";
 
 export default function TabOneScreen() {
   return (
     <View style={styles.wrapper}>
+      <DepositFloatingButton />
       <PaymentSummary />
       {/* <MyAccountImage />
       <View style={{ alignItems: "center", marginBottom: 30 }}>
