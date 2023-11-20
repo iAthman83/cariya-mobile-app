@@ -29,7 +29,7 @@ export default function TabLayout() {
           title: "Home",
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
           headerRight: () => (
-            <Link href="/modal" asChild>
+            <Link href="/(modals)/terms" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -44,15 +44,15 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* <Tabs.Screen
-        name="account"
+      <Tabs.Screen
+        name="details"
         options={{
-          title: "Account",
+          title: "My Details",
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
-          headerShown: false,
+          // headerShown: false,
         }}
       />
-      <Tabs.Screen
+      {/* <Tabs.Screen
         name="auth"
         options={{
           title: "User Auth",
