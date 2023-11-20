@@ -9,11 +9,12 @@ const inputBorderColor= "#BDBDBD"
 const linkedInColor = '#0077b5'
 const facebookColor = "#4267B2"
 const googleColor = "#DB4437"
+const grey = '#5E5D5E'
 
 export default {
   light: {
     text: '#201520',
-    background: '#F3F7F5',
+    background: '#fff',
     tint: primaryTintColor,
     // tint: tintColorLight,
     tabIconDefault: '#ccc',
@@ -21,7 +22,7 @@ export default {
   },
   dark: {
     text: '#F3F7F5',
-    background: '#201520',
+    background: '#000',
     tint: primaryTintColor,
     // tint: tintColorDark,
     tabIconDefault: '#ccc',
@@ -34,5 +35,6 @@ export default {
   linkedInColor,
   tintColorDark,
   facebookColor,
-  googleColor
+  googleColor,
+  grey
 };

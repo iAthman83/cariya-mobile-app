@@ -7,7 +7,15 @@ import {
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack, useRouter } from "expo-router";
 import { useEffect } from "react";
-import { useColorScheme } from "react-native";
+import { TouchableOpacity, useColorScheme } from "react-native";
+import Icons from "../components/utils/Icons";
+
+function TabBarIcon(props: {
+  name: React.ComponentProps<typeof FontAwesome>["name"];
+  color: string;
+}) {
+  return <FontAwesome size={28} style={{ marginBottom: -3 }} {...props} />;
+}
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -53,7 +61,7 @@ function RootLayoutNav() {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      router.push("/(modals)/login");
+      router.replace("/(auth)/login");
     }
   }, [isAuthenticated]);
 
@@ -62,8 +70,12 @@ function RootLayoutNav() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="(modals)/login"
-          options={{ presentation: "modal", title: "Log in or sign up" }}
+          name="(auth)/login"
+          options={{
+            // presentation: "modal",
+            title: "Log in or sign up",
+            // headerShown: false,
+          }}
         />
         <Stack.Screen
           name="(modals)/terms"
