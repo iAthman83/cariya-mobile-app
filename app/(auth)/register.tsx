@@ -6,10 +6,10 @@ import {
   Pressable,
 } from "react-native";
 import { router } from "expo-router";
-import { View, Text, TextInput } from "../components/Themed";
-import MainHeader from "../components/utils/MainHeader";
-import Colors from "../constants/Colors";
-import Icons from "../components/utils/Icons";
+import { View, Text, TextInput } from "../../components/Themed";
+import MainHeader from "../../components/utils/MainHeader";
+import Colors from "../../constants/Colors";
+import Icons from "../../components/utils/Icons";
 
 type Props = {};
 
@@ -87,7 +87,7 @@ const register = (props: Props) => {
         </Pressable>
         <View style={styles.haveNoAccountWrapper}>
           <Text>Have an account?</Text>
-          <Pressable onPress={() => router.replace("/(tabs)/auth/login")}>
+          <Pressable onPress={() => router.replace("/(auth)/login")}>
             <Text style={{ color: Colors.primaryTintColor }}>Login</Text>
           </Pressable>
         </View>
