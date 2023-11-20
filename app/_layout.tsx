@@ -49,14 +49,24 @@ export default function RootLayout() {
 function RootLayoutNav() {
   const router = useRouter();
   const colorScheme = useColorScheme();
-  const isAuthenticated = true;
+  const isAuthenticated = false;
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      router.push("/(modals)/login");
+    }
+  }, [isAuthenticated]);
 
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
-          name="modal"
+          name="(modals)/login"
+          options={{ presentation: "modal", title: "Log in or sign up" }}
+        />
+        <Stack.Screen
+          name="(modals)/terms"
           options={{ presentation: "modal", title: "Terms and conditions" }}
         />
       </Stack>
