@@ -5,21 +5,20 @@ import {
   Dimensions,
   Pressable,
 } from "react-native";
-import { Link, router } from "expo-router";
-import { View, Text, TextInput } from "../../../components/Themed";
-import MainHeader from "../../../components/utils/MainHeader";
-import Colors from "../../../constants/Colors";
-import Icons from "../../../components/utils/Icons";
+import { router } from "expo-router";
+import { View, Text, TextInput } from "../components/Themed";
+import MainHeader from "../components/utils/MainHeader";
+import Colors from "../constants/Colors";
+import Icons from "../components/utils/Icons";
 
 type Props = {};
 
-const login = (props: Props) => {
+const register = (props: Props) => {
   return (
-    // <SafeAreaView>
     <View style={styles.container}>
       <View style={{ ...styles.viewWrapper, ...styles.welcomeText }}>
-        <MainHeader input="welcome back!" />
-        <Text>Please sign in to your account</Text>
+        <MainHeader input="welcome to cariya!" />
+        <Text>Create an account to get started</Text>
       </View>
       {/* Input boxes */}
       <View style={{ ...styles.viewWrapper, ...styles.inputBoxesWrapper }}>
@@ -32,6 +31,14 @@ const login = (props: Props) => {
           <TextInput
             style={styles.inputBox}
             placeholder="Password"
+            secureTextEntry={true}
+          />
+        </View>
+        <View>
+          <Text>Confirm Password</Text>
+          <TextInput
+            style={styles.inputBox}
+            placeholder="Confirm Password"
             secureTextEntry={true}
           />
         </View>
@@ -75,24 +82,21 @@ const login = (props: Props) => {
       <View style={{ ...styles.viewWrapper, ...styles.authWrapper }}>
         <Pressable style={styles.loginButton} onPress={() => {}}>
           <Text style={{ fontSize: 18, color: Colors.tintColorDark }}>
-            Login
+            Register
           </Text>
         </Pressable>
         <View style={styles.haveNoAccountWrapper}>
-          <Text>Don't an account?</Text>
-          {/* <Link replace href="/(tabs)/auth/register"> */}
-          <Pressable onPress={() => router.replace("/(tabs)/auth/register")}>
-            <Text style={{ color: Colors.primaryTintColor }}>Register</Text>
+          <Text>Have an account?</Text>
+          <Pressable onPress={() => router.replace("/(tabs)/auth/login")}>
+            <Text style={{ color: Colors.primaryTintColor }}>Login</Text>
           </Pressable>
-          {/* </Link> */}
         </View>
       </View>
     </View>
-    // </SafeAreaView>
   );
 };
 
-export default login;
+export default register;
 
 const styles = StyleSheet.create({
   container: {
