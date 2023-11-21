@@ -65,7 +65,7 @@ function RootLayoutNav() {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      router.replace("/(auth)/login");
+      router.replace("/(details)/subscriptions");
     }
   }, [isAuthenticated]);
 
@@ -101,23 +101,14 @@ function RootLayoutNav() {
         <Stack.Screen
           name="(details)/userDetailsForm"
           options={{
-            // presentation: "modal",
             title: "Parent details",
-            // headerShown: false,
-            headerRight: () => (
-              <Link href="/(modals)/terms" asChild>
-                <Pressable>
-                  {({ pressed }) => (
-                    <FontAwesome
-                      name="info-circle"
-                      size={25}
-                      color={Colors[colorScheme ?? "light"].text}
-                      style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                    />
-                  )}
-                </Pressable>
-              </Link>
-            ),
+          }}
+        />
+        {/* user subscription screen */}
+        <Stack.Screen
+          name="(details)/subscriptions"
+          options={{
+            title: "Select a subscription",
           }}
         />
         {/* terms modal */}

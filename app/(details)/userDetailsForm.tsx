@@ -71,7 +71,7 @@ const userDetailsForm = (props: Props) => {
           ...defaultStyles.btn,
           ...{ backgroundColor: Colors.facebookColor },
         }}
-        onPress={() => router.push("/(tabs)/")}
+        onPress={() => router.replace("/(details)/subscriptions")}
       >
         <Text style={defaultStyles.btnText}>Got to home screen</Text>
       </TouchableOpacity>

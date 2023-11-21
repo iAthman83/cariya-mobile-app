@@ -1,12 +1,9 @@
 import { StyleSheet, TouchableOpacity, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { defaultStyles } from "../../constants/Styles";
-import { Link, router } from "expo-router";
+import { router } from "expo-router";
 import { View, Text, TextInput } from "../../components/Themed";
-import MainHeader from "../../components/utils/MainHeader";
 import Colors from "../../constants/Colors";
-import Icons from "../../components/utils/Icons";
-import MyAccountImage from "../../components/account/MyAccountImage";
 
 type Props = {};
 
