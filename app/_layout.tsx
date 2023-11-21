@@ -72,7 +72,9 @@ function RootLayoutNav() {
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
+        {/* tabs screen */}
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        {/* auth screen */}
         <Stack.Screen
           name="(auth)/login"
           options={{
@@ -95,10 +97,35 @@ function RootLayoutNav() {
             ),
           }}
         />
+        {/* user details screen */}
+        <Stack.Screen
+          name="(details)/userDetailsForm"
+          options={{
+            // presentation: "modal",
+            title: "Parent details",
+            // headerShown: false,
+            headerRight: () => (
+              <Link href="/(modals)/terms" asChild>
+                <Pressable>
+                  {({ pressed }) => (
+                    <FontAwesome
+                      name="info-circle"
+                      size={25}
+                      color={Colors[colorScheme ?? "light"].text}
+                      style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                    />
+                  )}
+                </Pressable>
+              </Link>
+            ),
+          }}
+        />
+        {/* terms modal */}
         <Stack.Screen
           name="(modals)/terms"
           options={{ presentation: "modal", title: "Terms and conditions" }}
         />
+        {/* payment form modal */}
         <Stack.Screen
           name="(modals)/paymentForm"
           options={{ presentation: "modal", title: "Top up your subscription" }}

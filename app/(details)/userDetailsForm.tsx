@@ -10,7 +10,7 @@ import MyAccountImage from "../../components/account/MyAccountImage";
 
 type Props = {};
 
-const login = (props: Props) => {
+const userDetailsForm = (props: Props) => {
   return (
     <View style={styles.container}>
       <View style={styles.logoWrapper}>
@@ -21,78 +21,34 @@ const login = (props: Props) => {
       </View>
       <TextInput
         autoCapitalize="none"
-        placeholder="Email"
+        placeholder="Names"
+        style={[defaultStyles.inputField, { marginBottom: 30 }]}
+      />
+      <TextInput
+        autoCapitalize="none"
+        placeholder="Mobile number"
+        style={[defaultStyles.inputField, { marginBottom: 30 }]}
+      />
+      <TextInput
+        autoCapitalize="none"
+        placeholder="Occupation"
+        style={[defaultStyles.inputField, { marginBottom: 30 }]}
+      />
+      <TextInput
+        autoCapitalize="none"
+        placeholder="Number of children"
+        style={[defaultStyles.inputField, { marginBottom: 30 }]}
+      />
+      <TextInput
+        autoCapitalize="none"
+        placeholder="Photo upload"
         style={[defaultStyles.inputField, { marginBottom: 30 }]}
       />
 
       <TouchableOpacity style={defaultStyles.btn}>
-        <Text style={defaultStyles.btnText}>Continue</Text>
+        <Text style={defaultStyles.btnText}>Submit</Text>
       </TouchableOpacity>
 
-      <View style={styles.seperatorView}>
-        <View
-          style={{
-            flex: 1,
-            // borderBottomColor: "black",
-            borderBottomWidth: StyleSheet.hairlineWidth,
-          }}
-        />
-        <Text style={styles.seperator}>or</Text>
-        <View
-          style={{
-            flex: 1,
-            // borderBottomColor: "black",
-            borderBottomWidth: StyleSheet.hairlineWidth,
-          }}
-        />
-      </View>
-
-      <View style={{ gap: 20 }}>
-        <TouchableOpacity style={styles.btnOutline}>
-          <Ionicons
-            name="mail"
-            size={24}
-            style={{
-              ...defaultStyles.btnIcon,
-              ...{ color: Colors.linkedInColor },
-            }}
-          />
-          <Text style={styles.btnOutlineText}>Continue with LinkedIn</Text>
-        </TouchableOpacity>
-
-        {/* <TouchableOpacity style={styles.btnOutline} onPress={() => {}}>
-          <Ionicons
-            name="md-logo-apple"
-            size={24}
-            style={defaultStyles.btnIcon}
-          />
-          <Text style={styles.btnOutlineText}>Continue with Apple</Text>
-        </TouchableOpacity> */}
-
-        <TouchableOpacity style={styles.btnOutline} onPress={() => {}}>
-          <Ionicons
-            name="md-logo-google"
-            size={24}
-            style={{
-              ...defaultStyles.btnIcon,
-              ...{ color: Colors.googleColor },
-            }}
-          />
-          <Text style={styles.btnOutlineText}>Continue with Google</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.btnOutline} onPress={() => {}}>
-          <Ionicons
-            name="md-logo-facebook"
-            size={24}
-            style={{
-              ...defaultStyles.btnIcon,
-              ...{ color: Colors.facebookColor },
-            }}
-          />
-          <Text style={styles.btnOutlineText}>Continue with Facebook</Text>
-        </TouchableOpacity>
-      </View>
       <View style={styles.seperatorView}>
         <View
           style={{
@@ -113,17 +69,17 @@ const login = (props: Props) => {
       <TouchableOpacity
         style={{
           ...defaultStyles.btn,
-          ...{ backgroundColor: Colors.grey },
+          ...{ backgroundColor: Colors.facebookColor },
         }}
-        onPress={() => router.replace("/(details)/userDetailsForm")}
+        onPress={() => router.push("/(tabs)/")}
       >
-        <Text style={defaultStyles.btnText}>Got to details screen</Text>
+        <Text style={defaultStyles.btnText}>Got to home screen</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
-export default login;
+export default userDetailsForm;
 
 const styles = StyleSheet.create({
   container: {
