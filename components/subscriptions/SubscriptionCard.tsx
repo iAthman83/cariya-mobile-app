@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   subscriptionHeader: {
     fontFamily: "Inter-Bold",
-    fontSize: 24,
+    fontSize: 16,
     color: Colors.primaryTintColor,
   },
   subscriptionDescription: {

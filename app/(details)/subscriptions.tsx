@@ -11,22 +11,22 @@ const subscriptions = (props: Props) => {
       <ScrollView horizontal style={styles.scrollViewStyle}>
         <SubscriptionCard
           plan="Basic"
-          amountInUgx="shs 5,000"
+          amountInUgx="5k"
           amountInDollars="($ 1.35)"
         />
         <SubscriptionCard
           plan="Silver"
-          amountInUgx="shs 10,000"
+          amountInUgx="10k"
           amountInDollars="($ 2.6)"
         />
         <SubscriptionCard
           plan="Gold"
-          amountInUgx="shs 20,000"
+          amountInUgx="20k"
           amountInDollars="($ 5.3)"
         />
         <SubscriptionCard
           plan="Platinum"
-          amountInUgx="shs 60,000"
+          amountInUgx="60k"
           amountInDollars="($ 16)"
         />
       </ScrollView>
