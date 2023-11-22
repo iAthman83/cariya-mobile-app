@@ -73,7 +73,7 @@ const userDetailsForm = (props: Props) => {
         }}
         onPress={() => router.replace("/(details)/subscriptions")}
       >
-        <Text style={defaultStyles.btnText}>Got to home screen</Text>
+        <Text style={defaultStyles.btnText}>Subscription screen</Text>
       </TouchableOpacity>
     </View>
   );

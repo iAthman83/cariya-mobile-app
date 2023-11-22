@@ -16,11 +16,13 @@ type Props = {
   amountInDollars: string;
   bgColor: string;
   btnBgColor: string;
+  planBenefits: string[];
 };
 
 const SubscriptionCard = (props: Props) => {
   return (
     <View style={styles.container}>
+      {/* header */}
       <Text style={styles.subscriptionHeader}>{props.plan}</Text>
       <View style={{ flexDirection: "row" }}>
         <Text>shs</Text>
@@ -30,17 +32,20 @@ const SubscriptionCard = (props: Props) => {
         {props.amountInDollars}
       </Text>
       <Text style={styles.subscriptionTime}>per month, per child</Text>
+      {/* cured section */}
       <View style={{ ...styles.curved, backgroundColor: props.bgColor }}>
-        <View style={{ ...styles.btnOutline, backgroundColor: props.bgColor }}>
-          <Text style={styles.btnOutlineText}>Personality assessment test</Text>
-        </View>
-        <View style={{ ...styles.btnOutline, backgroundColor: props.bgColor }}>
-          <Text style={styles.btnOutlineText}>Talent discovery tool</Text>
-        </View>
+        {props.planBenefits.map((plan) => (
+          <View
+            key={plan}
+            style={{ ...styles.btnOutline, backgroundColor: props.bgColor }}
+          >
+            <Text style={styles.btnOutlineText}>{plan}</Text>
+          </View>
+        ))}
         <TouchableOpacity
           style={{ ...styles.btn, backgroundColor: props.btnBgColor }}
         >
-          <Text style={defaultStyles.btnText}>Continue</Text>
+          <Text style={defaultStyles.btnText}>Subscribe</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -109,7 +114,7 @@ const styles = StyleSheet.create({
   },
   btnOutlineText: {
     color: Colors.primaryTextColor,
-    fontSize: 16,
+    fontSize: 18,
     // fontFamily: "mon-sb",
   },
   btn: {
@@ -119,6 +124,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "80%",
-    marginTop: Platform.OS === "android" ? "50%" : "60%",
+    // alignContent: "flex-start",
   },
 });
