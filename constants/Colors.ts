@@ -10,6 +10,7 @@ const linkedInColor = '#0077b5'
 const facebookColor = "#4267B2"
 const googleColor = "#DB4437"
 const grey = '#5E5D5E'
+const black = "#000"
 
 export default {
   light: {
@@ -36,5 +37,6 @@ export default {
   tintColorDark,
   facebookColor,
   googleColor,
-  grey
+  grey,
+  black
 };
