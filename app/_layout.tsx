@@ -65,7 +65,7 @@ function RootLayoutNav() {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      router.replace("/(details)/subscriptions");
+      router.replace("/(auth)/login");
     }
   }, [isAuthenticated]);
 
