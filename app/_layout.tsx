@@ -108,7 +108,7 @@ function RootLayoutNav() {
         <Stack.Screen
           name="(details)/subscriptions"
           options={{
-            title: "Select a subscription",
+            title: "Subscription plans",
           }}
         />
         {/* terms modal */}
