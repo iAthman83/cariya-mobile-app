@@ -24,11 +24,11 @@ const userDetailsForm = (props: Props) => {
         placeholder="Names"
         style={[defaultStyles.inputField, { marginBottom: 30 }]}
       />
-      <TextInput
+      {/* <TextInput
         autoCapitalize="none"
         placeholder="Mobile number"
         style={[defaultStyles.inputField, { marginBottom: 30 }]}
-      />
+      /> */}
       <TextInput
         autoCapitalize="none"
         placeholder="Occupation"
@@ -39,11 +39,11 @@ const userDetailsForm = (props: Props) => {
         placeholder="Number of children"
         style={[defaultStyles.inputField, { marginBottom: 30 }]}
       />
-      <TextInput
+      {/* <TextInput
         autoCapitalize="none"
         placeholder="Photo upload"
         style={[defaultStyles.inputField, { marginBottom: 30 }]}
-      />
+      /> */}
 
       <TouchableOpacity style={defaultStyles.btn}>
         <Text style={defaultStyles.btnText}>Submit</Text>

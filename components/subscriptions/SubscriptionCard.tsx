@@ -28,9 +28,9 @@ const SubscriptionCard = (props: Props) => {
         <Text>shs</Text>
         <Text style={styles.subscriptionAmount}>{props.amountInUgx}</Text>
       </View>
-      <Text style={styles.subscriptionDescription}>
+      {/* <Text style={styles.subscriptionDescription}>
         {props.amountInDollars}
-      </Text>
+      </Text> */}
       <Text style={styles.subscriptionTime}>per month, per child</Text>
       {/* cured section */}
       <View style={{ ...styles.curved, backgroundColor: props.bgColor }}>
