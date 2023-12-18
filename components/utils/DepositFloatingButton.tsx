@@ -2,7 +2,6 @@ import { Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import { Text, View } from "../Themed";
 import React from "react";
 import Colors from "../../constants/Colors";
-import { FontAwesome } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
 const DepositFloatingButton = () => {
@@ -12,7 +11,7 @@ const DepositFloatingButton = () => {
       onPress={() => router.push("/(modals)/paymentForm")}
       style={styles.container}
     >
-      <FontAwesome size={20} name="heart" color={Colors.primaryTextColor} />
+      <Text style={{ color: Colors.primaryTextColor }}>Subscribe</Text>
     </TouchableOpacity>
   );
 };
@@ -24,10 +23,10 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: Dimensions.get("window").width / 20,
-    borderRadius: Dimensions.get("window").width / 7 / 2,
+    padding: 10,
+    borderRadius: 5,
     backgroundColor: Colors.primaryTintColor,
-    width: Dimensions.get("window").width / 6.8,
+    width: "auto",
     position: "absolute",
     bottom: 20,
     right: 20,

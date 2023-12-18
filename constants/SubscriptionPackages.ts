@@ -1,19 +1,23 @@
 export const basicPlan = [
-  "Personality assessment test",
-  "Talent discovery tool",
+  "Personality assessment",
+  "Discovery tool",
 ]
 export const silverPlan = [
-  "School  fees payout",
   "Personalized career guidance",
+  "Personality assessment",
+  "Talent discovery"
 ]
 export const goldPlan = [
-  "All basic benefits",
-  "All Silver benefits",
+  "School fees payout",
+  "Personalized career guidance",
+  "Personality assessment",
+  "Talent discovery",
 ]
 export const platinumPlan = [
-   "All basic benefits",
-  "All Silver benefits",
-  "Access interest free loans",
-  "Job center resources",
-  "Unemployment basic living allowance",
+  "Interest free loans",
+  "Unemployment allowance",
+  "School fees payout",
+  "Personalized career guidance",
+  "Personality assessment",
+  "Talent discovery",
 ]

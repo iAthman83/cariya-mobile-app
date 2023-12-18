@@ -71,7 +71,7 @@ const userDetailsForm = (props: Props) => {
           ...defaultStyles.btn,
           ...{ backgroundColor: Colors.facebookColor },
         }}
-        onPress={() => router.replace("/(details)/subscriptions")}
+        onPress={() => router.push("/(details)/subscriptions")}
       >
         <Text style={defaultStyles.btnText}>Subscription screen</Text>
       </TouchableOpacity>

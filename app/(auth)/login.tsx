@@ -112,7 +112,7 @@ const login = (props: Props) => {
           ...defaultStyles.btn,
           ...{ backgroundColor: Colors.grey },
         }}
-        onPress={() => router.replace("/(details)/userDetailsForm")}
+        onPress={() => router.push("/(details)/userDetailsForm")}
       >
         <Text style={defaultStyles.btnText}>Got to details screen</Text>
       </TouchableOpacity>
